@@ -38,9 +38,8 @@ if __name__ == "__main__":
         s += 'HBAR: ' + str(h['Data']['HBAR-USD']['PRICE']) + '\n'
 
     if s:
-        resp = requests.post('https://textbelt.com/text', {
+        requests.post('https://textbelt.com/text', {
             'phone': PHONE_NUMBER,
             'message': s,
             'key': TEXTBELT_KEY,
         })
-        print(resp.json())
