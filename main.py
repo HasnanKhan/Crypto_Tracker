@@ -31,11 +31,11 @@ if __name__ == "__main__":
     hbar_change = h['Data']['HBAR-USD']['CURRENT_HOUR_CHANGE']
 
     if abs(xrp_change) > 0.02:
-        s += 'XRP: ' + x['Data']['XRP-USD']['PRICE'] + '\n'
+        s += 'XRP: ' + str(x['Data']['XRP-USD']['PRICE']) + '\n'
     if abs(btc_change) > 1000:
-        s += 'BTC: ' + b['Data']['BTC-USD']['PRICE'] + '\n'
+        s += 'BTC: ' + str(b['Data']['BTC-USD']['PRICE']) + '\n'
     if abs(hbar_change) > 0.01:
-        s += 'HBAR: ' + h['Data']['HBAR-USD']['PRICE'] + '\n'
+        s += 'HBAR: ' + str(h['Data']['HBAR-USD']['PRICE']) + '\n'
 
     if s:
         requests.post('https://textbelt.com/text', {
