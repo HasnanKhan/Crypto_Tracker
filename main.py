@@ -30,7 +30,7 @@ if __name__ == "__main__":
     btc_change = b['Data']['BTC-USD']['CURRENT_HOUR_CHANGE']
     hbar_change = h['Data']['HBAR-USD']['CURRENT_HOUR_CHANGE']
 
-    if abs(xrp_change) > 0.01:
+    if abs(xrp_change) > 0.025:
         s += 'XRP: ' + str(x['Data']['XRP-USD']['PRICE']) + " " + "Change: " + str(xrp_change) + '\n'
     if abs(btc_change) > 1000:
         s += 'BTC: ' + str(b['Data']['BTC-USD']['PRICE']) + " " + "Change: " + str(btc_change) + '\n'
